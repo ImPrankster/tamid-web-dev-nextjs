@@ -6,8 +6,13 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
       </Head>
-      <main>
-        <h1>Hello World</h1>
+      <main className="main-container">
+        <h1>Hello World !</h1>
+        <div className="counter">
+          <button>-</button>
+          <div>0</div>
+          <button>+</button>
+        </div>
       </main>
     </>
   );

@@ -1,0 +1,135 @@
+:root {
+  --primary: #a21caf;
+  --primary-focus: #701a75;
+  --dimmed-bg: #e2e8f0;
+  font-family: monospace;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 80vw;
+  align-items: stretch;
+  justify-content: center;
+  margin: 10px;
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: xx-large;
+  font-family: monospace;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 8px;
+}
+
+.todo-item {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px black solid;
+}
+
+.todo-item:hover {
+  background-color: var(--dimmed-bg);
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbtn {
+  min-width: 50px;
+  text-align: center;
+  padding: 4px;
+  border: 0;
+  text-decoration: none;
+  color: black;
+  border-radius: 8px;
+}
+
+.navbtn:hover {
+  cursor: pointer;
+  background-color: var(--dimmed-bg);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.framework-card {
+  background-color: var(--dimmed-bg);
+  text-decoration: none;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  border-radius: 16px;
+}
+
+.framework-card img {
+  width: auto;
+  height: 150px;
+  border-radius: 16px 16px 0 0;
+}
+
+.framework-info {
+  margin: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+input {
+  font-size: medium;
+  min-width: 200px;
+  border: 1px black solid;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+button {
+  font-size: medium;
+  min-width: 50px;
+  border: 0;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+button:hover {
+  background-color: var(--primary-focus);
+  cursor: pointer;
+}
