@@ -1,6 +1,17 @@
 import Head from "next/head";
+import { useState } from "react";
 
 export default function Home() {
+  const [number, setNumber] = useState(0);
+
+  function addToNumber() {
+    setNumber(number + 1);
+  }
+
+  function subToNumber() {
+    setNumber(number - 1);
+  }
+
   return (
     <>
       <Head>
@@ -9,9 +20,9 @@ export default function Home() {
       <main className="main-container">
         <h1>Hello World !</h1>
         <div className="counter">
-          <button>-</button>
-          <div>0</div>
-          <button>+</button>
+          <button onClick={subToNumber}>-</button>
+          <div>{number}</div>
+          <button onClick={addToNumber}>+</button>
         </div>
       </main>
     </>

@@ -1,3 +1,5 @@
+import Frameworkjojo from "@/components/framework";
+
 const Frameworks = [
   {
     name: "Next.js",
@@ -48,83 +50,30 @@ const FrameworksPage = () => {
         If you want a well-supported, performent, and well-documented framework,
         you can't go wrong with
       </p>
-      <span className="framework-card">
-        <img src={Frameworks[0].img} alt={Frameworks[0].name} />
-        <div className="framework-info">
-          <p>{Frameworks[0].name}</p>
-          <a href={Frameworks[0].url}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-right"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-      </span>
+      <Frameworkjojo
+        name={Frameworks[0].name}
+        url={Frameworks[0].url}
+        img={Frameworks[0].img}
+      />
       <p>
         If you want a web framework with a cute mascot, amber has a cute hamster
       </p>
-      <span className="framework-card">
-        <img src={Frameworks[2].img} alt={Frameworks[2].name} />
-        <div className="framework-info">
-          <p>{Frameworks[2].name}</p>
-          <a href={Frameworks[2].url}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-right"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-      </span>
+      <Frameworkjojo
+        name={Frameworks[2].name}
+        url={Frameworks[2].url}
+        img={Frameworks[2].img}
+      />
 
       <h1>Web Frameworks:</h1>
       <div className="framework-grid">
         {Frameworks.map((framework, i) => {
           return (
-            <span className="framework-card" key={i}>
-              <img src={framework.img} alt={framework.name} />
-              <div className="framework-info">
-                <p>{framework.name}</p>
-                <a href={framework.url}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-arrow-right"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </span>
+            <Frameworkjojo
+              name={framework.name}
+              url={framework.url}
+              img={framework.img}
+              key={i}
+            />
           );
         })}
       </div>
