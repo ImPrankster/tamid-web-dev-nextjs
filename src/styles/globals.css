@@ -1,3 +1,6 @@
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary: #a21caf;
   --primary-focus: #701a75;
